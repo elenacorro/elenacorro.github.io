@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+	<style>
+		.anuncio-contenido {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+    max-width: 728px; 
+    height: 90px; 
+    background-color: #fff; 
+    padding: 5px; 
+    margin: 10px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Imagen del anuncio */
+.anuncio-imagen {
+    max-width: 100%; 
+    height: auto; 
+}
+
+/* Estilo del título */
+.headline {
+    font-size: 16px; 
+    text-align: center; 
+    margin: 10px 0; 
+}
+
+/* Estilo del botón */
+.cta-button {
+    padding: 10px 15px; 
+    background-color: #8A2BE2; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+
+.cta-button:hover {
+    background-color: #7B68EE; 
+}
+
+@media (min-width: 769px) {
+    .anuncio-contenido {
+        height: 90px; 
+        flex-direction: row; 
+    }
+    .headline {
+        font-size: 20px; 
+    }
+    .cta-button {
+        align-self: flex-end; 
+    }
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    .anuncio-contenido {
+        height: 300px; 
+        flex-direction: column; 
+    }
+    .headline {
+        font-size: 18px; 
+    }
+    
+    
+    .cta-button {
+        margin-top: 10px; 
+    }
+}
+
+	</style>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+	 <link rel="stylesheet" href="css 3.css"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+
+<body>
+	
+            <div class="anuncio-contenido">
+                <img src="anuncio.ele.jpg" alt="Accesorios Urbanos" class="anuncio-imagen">
+                
+				
+					<h1 class="headline">para todos</h1>
+                    <a href="html 1.html">
+    <button class="cta-button">Descubre más</button>
+</a>
+                   
+               
+            </div>
+</body>
+</html>
