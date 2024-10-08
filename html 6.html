@@ -3,79 +3,92 @@
 
 <head>
 	<style>
-		.anuncio-contenido {
-    display: flex; 
-    flex-direction: column; 
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%; 
-    max-width: 728px; 
-    height: 90px; 
-    background-color: #fff; 
-    padding: 5px; 
-    margin: 10px auto; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
+        .anuncio-contenido {
+            display: flex;
+            flex-direction: column; /* Para móviles */
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 728px;
+            height: 90px; /* Altura predeterminada para pantallas grandes */
+            background-color: #fff;
+            padding: 5px;
+            margin: 10px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-/* Imagen del anuncio */
-.anuncio-imagen {
-    max-width: 100%; 
-    height: auto; 
-}
+        /* Imagen del anuncio */
+        .anuncio-imagen {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
 
-/* Estilo del título */
-.headline {
-    font-size: 16px; 
-    text-align: center; 
-    margin: 10px 0; 
-}
+        /* Estilo del título */
+        .headline {
+            font-size: 16px;
+            text-align: center;
+            margin: 10px 0;
+        }
 
-/* Estilo del botón */
-.cta-button {
-    padding: 10px 15px; 
-    background-color: #8A2BE2; 
-    color: white; 
-    border: none; 
-    border-radius: 5px;
-    cursor: pointer; 
-    transition: background-color 0.3s; 
-}
+        /* Estilo del botón */
+        .cta-button {
+            padding: 10px 15px;
+            background-color: #8A2BE2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
+        .cta-button:hover {
+            background-color: #7B68EE;
+        }
 
-.cta-button:hover {
-    background-color: #7B68EE; 
-}
+        /* Estilos para pantallas grandes */
+        @media (min-width: 769px) {
+            .anuncio-contenido {
+                flex-direction: row; /* Pone los elementos en fila */
+                height: 90px; 
+                justify-content: space-between; /* Espacio uniforme entre elementos */
+            }
 
-@media (min-width: 769px) {
-    .anuncio-contenido {
-        height: 90px; 
-        flex-direction: row; 
-    }
-    .headline {
-        font-size: 20px; 
-    }
-    .cta-button {
-        align-self: flex-end; 
-    }
-}
+            .anuncio-imagen {
+                flex: 1; /* La imagen toma una parte proporcional del ancho */
+                max-height: 90px; /* Ajusta la altura máxima de la imagen */
+            }
 
-/* Estilos para móviles */
-@media (max-width: 768px) {
-    .anuncio-contenido {
-        height: 300px; 
-        flex-direction: column; 
-    }
-    .headline {
-        font-size: 18px; 
-    }
-    
-    
-    .cta-button {
-        margin-top: 10px; 
-    }
-}
+            .headline {
+                flex: 2; /* El título ocupa más espacio */
+                font-size: 16px;
+                text-align: center;
+            }
 
-	</style>
+            .cta-button {
+                flex: 1; /* El botón ocupa espacio proporcional */
+                align-self: center;
+                padding: 10px;
+            }
+        }
+
+        /* Estilos para móviles */
+        @media (max-width: 768px) {
+            .anuncio-contenido {
+                height: 600px; /* Altura de 600px en móviles */
+                width: 300px; /* Ancho de 300px en móviles */
+                flex-direction: column; /* Asegúrate de que sea columna para móviles */
+            }
+
+            .headline {
+                font-size: 18px;
+            }
+
+            .cta-button {
+                margin-top: 10px;
+            }
+        }
+    </style>
 <meta charset="utf-8">
 <title>Documento sin título</title>
 	 <link rel="stylesheet" href="css 3.css"> 
@@ -89,11 +102,12 @@
                 
 				
 					<h1 class="headline">para todos</h1>
-                    <a href="html 1.html">
+                   
+                   <a href="" target="_blank">
     <button class="cta-button">Descubre más</button>
 </a>
-                   
                
             </div>
 </body>
 </html>
+
