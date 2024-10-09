@@ -2,112 +2,118 @@
 <html>
 
 <head>
-	<style>
-        .anuncio-contenido {
-            display: flex;
-            flex-direction: column; /* Para móviles */
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 728px;
-            height: 90px; /* Altura predeterminada para pantallas grandes */
-            background-color: #fff;
-            padding: 5px;
-            margin: 10px auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Imagen del anuncio */
-        .anuncio-imagen {
-            max-width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
-
-        /* Estilo del título */
-        .headline {
-            font-size: 16px;
-            text-align: center;
-            margin: 10px 0;
-        }
-
-        /* Estilo del botón */
-        .cta-button {
-            padding: 10px 15px;
-            background-color: #8A2BE2;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #7B68EE;
-        }
-
-        /* Estilos para pantallas grandes */
-        @media (min-width: 769px) {
-            .anuncio-contenido {
-                flex-direction: row; /* Pone los elementos en fila */
-                height: 90px; 
-                justify-content: space-between; /* Espacio uniforme entre elementos */
-            }
-
-            .anuncio-imagen {
-                flex: 1; /* La imagen toma una parte proporcional del ancho */
-                max-height: 90px; /* Ajusta la altura máxima de la imagen */
-            }
-
-            .headline {
-                flex: 2; /* El título ocupa más espacio */
-                font-size: 16px;
-                text-align: center;
-            }
-
-            .cta-button {
-                flex: 1; /* El botón ocupa espacio proporcional */
-                align-self: center;
-                padding: 10px;
-            }
-        }
-
-        /* Estilos para móviles */
-        @media (max-width: 768px) {
-            .anuncio-contenido {
-                height: 600px; /* Altura de 600px en móviles */
-                width: 300px; /* Ancho de 300px en móviles */
-                flex-direction: column; /* Asegúrate de que sea columna para móviles */
-            }
-
-            .headline {
-                font-size: 18px;
-            }
-
-            .cta-button {
-                margin-top: 10px;
-            }
-        }
-    </style>
+	
 <meta charset="utf-8">
 <title>Documento sin título</title>
 	 <link rel="stylesheet" href="css 3.css"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
+<style>
+       /* Estilos generales */
+body {
+    margin: 0;
+}
 
+.anuncio-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    gap: 1px;
+}
+
+/* Imagen del anuncio */
+.anuncio-imagen {
+    width: 30%; /* Imagen ocupa el 30% del espacio en pantallas grandes */
+    height: auto;
+}
+
+/* Estilo del texto */
+.headline {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+/* Estilo del botón */
+.cta-button {
+    padding: 5px 10px;
+    background-color: #8A2BE2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #7B68EE;
+}
+
+/* Estilos para pantallas grandes */
+@media (max-width: 769px) {
+    .anuncio-contenido {
+        flex-direction: row;
+    }
+
+    .anuncio-imagen {
+        width: 148%;
+    }
+
+    .headline {
+        font-size: 24px;
+    }
+
+    .cta-button {
+        width: auto;
+    }
+}
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+    .anuncio-contenido {
+        align-items: center; /* Centra los elementos */
+        padding: 0; /* Elimina el padding adicional */
+        gap: 0; /* Asegura que no haya espacio extra entre elementos */
+    }
+
+    .anuncio-imagen {
+        width: %;
+        margin-bottom: 0; /* Elimina el espacio inferior */
+    }
+
+    .headline {
+        font-size: 20px;
+        margin: 40; /* Elimina márgenes extra en el texto */
+        padding: 0; /* Elimina padding si hay */
+    }
+
+    .cta-button {
+        width: 100%; /* Botón ocupa todo el ancho en móviles */
+        margin: 0; /* Elimina márgenes */
+        border-radius: 0; /* Alinea los bordes del botón al contenedor */
+    }
+}
+    </style>
 <body>
 	
             <div class="anuncio-contenido">
-                <img src="anuncio.ele.jpg" alt="Accesorios Urbanos" class="anuncio-imagen">
+				<picture>
+					<source media="(max-width: 500px)" srcset="anuncio.elena.jpg">
+					<img src="anuncio.elena.jpg" class="anuncio-imagen" alt="Accesorios urbanos">
+				</picture>
+               
                 
 				
 					<h1 class="headline">para todos</h1>
                    
-                   <a href="" target="_blank">
+                   <a href="index.html" target="_blank">
     <button class="cta-button">Descubre más</button>
 </a>
                
             </div>
 </body>
 </html>
-
